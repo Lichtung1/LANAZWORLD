@@ -1,10 +1,10 @@
 :root {
     /* Fabulous Palette */
     --background: #fff0f5;
-    --text: #000157;       /* Dark text for inside apps */
-    --accent: #ff69b4;     
-    --app-bg: #bbf7ff;      
-    --border: #ffb6c1;      
+    --text: #5c3a54;
+    --accent: #ff69b4;
+    --app-bg: #ffffff;
+    --border: #ffb6c1;
     --font-header: 'Caveat', cursive;
     --font-body: 'Quicksand', sans-serif;
 }
@@ -30,7 +30,7 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out;
 }
 
 #screen {
@@ -46,15 +46,11 @@ body {
     flex-direction: column;
 }
 
-/* --- PERMANENT STATUS BAR --- */
 #status-bar-top {
-    /* Semi-transparent white background */
     background-color: rgba(255, 255, 255, 0.5);
-    /* This blurs whatever is behind the element */
     backdrop-filter: blur(10px);
-    
-    color: var(--text); /* Always dark */
-    padding: 15px 30px 10px 30px;
+    color: var(--text);
+    padding: 15px 25px 10px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,8 +59,7 @@ body {
     position: relative;
     z-index: 10;
     flex-shrink: 0;
-    /* Softer border for the transparent look */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #time { text-align: left; }
@@ -73,14 +68,13 @@ body {
 #battery::after { content: ' 🔋'; }
 
 #os-version {
-    font-family: var(--font-header);
-    font-size: 18px;
-    opacity: 0.8; /* Make it a little more subtle */
+    /* ✨ REMOVED the font-family rule from here! ✨ */
+    /* It will now use the same font as the rest of the status bar. */
+    font-size: 14px; /* Adjusted size to look good */
+    font-weight: 600;
+    opacity: 0.7; 
 }
 
-
-
-/* Home screen sits below the status bar */
 #home-screen {
     padding: 20px;
     display: grid;
@@ -96,6 +90,7 @@ body {
     text-align: center;
     cursor: pointer;
 }
+
 .app-icon-art {
     width: 70px;
     height: 70px;
@@ -108,9 +103,11 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.2s;
 }
+
 .app-icon:hover .app-icon-art {
     transform: scale(1.1);
 }
+
 .app-icon-label {
     margin-top: 8px;
     font-size: 14px;
@@ -135,13 +132,18 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    align-items: center;
 }
 
-/* --- APP WINDOW STYLES --- */
+.app-icon-link { text-decoration: none; }
+
 .app-window {
     display: flex;
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: var(--app-bg);
     border-radius: 45px;
     flex-direction: column;
@@ -168,6 +170,7 @@ body {
     font-size: 28px;
     font-weight: bold;
 }
+
 .close-app-btn {
     position: absolute;
     top: 60px;
@@ -188,16 +191,20 @@ body {
     overflow-y: auto;
     flex-grow: 1;
 }
-.app-content h2 { 
+
+.app-content h2 {
     font-family: var(--font-header);
     font-size: 42px;
-    color: var(--accent); 
+    color: var(--accent);
 }
-.app-content ul { list-style: '♥  '; padding-left: 20px;}
+
+.app-content ul {
+    list-style: disc; 
+    padding-left: 20px;
+}
+
 .app-content strong { font-weight: 600; color: var(--accent); }
 
-
-/* --- RESPONSIVE DESIGN FOR MOBILE --- */
 @media (max-width: 768px) {
     #phone {
         width: 100%;
