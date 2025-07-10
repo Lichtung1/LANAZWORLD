@@ -26,5 +26,32 @@
   },
   "games": {
     "title": "Coffee Break"
+  },
+  "notes": {
+    "title": "Loose Thoughts",
+    "items": [
+      "TEST TEST... 1, 2, 3"
+    ]
+  },
+  "producer": {
+    "title": "Producer // Composer",
+    "tabs": {
+      "about": {
+        "title": "About",
+        "content": "<div class=\"video-container\"><iframe src=\"https://www.youtube.com/embed/rOhMpmBNTNA?si=3Q665HnYoBJDWFWp\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe></div><p>Lana Winterhalt is a signed Songwriter and Composer with High Priestess Publishing (Toronto, ON). Currently working from her home studio (Good + Plenty Studios), Lana is passionate about building evocative soundscapes for listeners to get lost in—but what won’t get lost? Your voice.</p><p>Throughout the entire process, Lana relies heavily on her experience as a professional performing artist and multi-instrumentalist, trusting her ear and following wherever the passion leads.</p>"
+      },
+      "services": {
+        "title": "Services",
+        "content": "<h2>Mentorship & Education</h2><p>Lana can help you start your home studio, walk you through a release strategy, or provide hands-on workshops in songwriting, at-home recording, and artist development.</p><h2>Composition</h2><p>A multi-instrumentalist and sonic world-builder, Lana can compose for short films, documentaries, horror, comedy, and commercials.</p><h2>Production & Engineering</h2><p>Want Lana to help produce or engineer your song? Let's get to the root of your music and paint the picture with as many colours, textures, and layers as you want.</p><h2>Rates</h2><p>Lana’s rates are flexible per project and on a sliding scale. She is passionate about making production accessible for IBPOC, single parents, and members of gender/sexual minority groups. Reach out to discuss your project!</p>"
+      },
+      "clients": {
+        "title": "Credits",
+        "content": "<h2>Client Releases</h2><ul><li><strong>Selci “Love Adorned (Lana Winterhalt Remix)</strong> - remixed, August 2023</li><li><strong>Maggie Collins “She Knows”</strong> - engineered, produced, mixed, mastered, June 2023</li><li><strong>Maggie Collins “Another Round”</strong> - engineered, produced, mixed, April 2023</li><li><strong>Syd Bomek “I Kinda Like It”</strong> - co-produced and mixed, September 2022</li><li><strong>Syd Bomek “Insane”</strong> - engineered, all instrumentals, mixed, November 2022</li></ul><h2>Songwriting & Training</h2><ul><li>Canadian Songwriter Challenge (as producer), 2023</li><li>BA, Minor in Music, 2015</li><li>Women In The Studio National Accelerator, 2021</li><li>Mentorship with JP Peters of Private Ear Recording, 2021-2022</li></ul>"
+      },
+      "gear": {
+        "title": "Studio Gear",
+        "content": "<h2>Microphones</h2><p>TLM103, SM7B, SM57, SM58, Sennheiser e935</p><h2>Instruments</h2><p>Squier Telecaster, Seagull Performer CW Acoustic, Gretsch short scale bass, Oscar Schmidt ukulele, misc. vintage folk guitars, trumpet, Native Instruments Komplete Kontrol S88, Arturia Minilab 2, BBC Core Orchestra (plug-in)</p><h2>Technical</h2><p>Logic ProX, Scarlett 18i20, Fender Deluxe Reverb (Digital), Boss VE-20 Vocal Performer</p>"
+      }
+    }
   }
 }

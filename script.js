@@ -1,4 +1,3 @@
-// --- DYNAMIC CONTENT LOADER ---
 document.addEventListener('DOMContentLoaded', () => {
     fetch('content.json')
         .then(response => response.json())
@@ -32,6 +31,48 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('games-title').innerHTML = data.games.title;
             document.getElementById('game-iframe').src = "https://attogram.github.io/2048-lite/";
 
+            // Populate Notes App
+            document.getElementById('notes-title').innerHTML = data.notes.title;
+            const notesList = document.getElementById('notes-items');
+            notesList.innerHTML = '';
+            data.notes.items.forEach(item => {
+                let li = document.createElement('li');
+                li.innerHTML = item;
+                notesList.appendChild(li);
+            });
+
+            // Populate Producer App
+            document.getElementById('producer-title').innerHTML = data.producer.title;
+            const producerTabsContainer = document.getElementById('producer-tabs');
+            const producerContentContainer = document.getElementById('producer-content');
+            
+            for (const key in data.producer.tabs) {
+                const tabData = data.producer.tabs[key];
+                let button = document.createElement('button');
+                button.className = 'tab-button';
+                button.textContent = tabData.title;
+                button.dataset.tab = key;
+                producerTabsContainer.appendChild(button);
+                let content = document.createElement('div');
+                content.className = 'tab-content';
+                content.id = `producer-content-${key}`;
+                content.innerHTML = tabData.content;
+                producerContentContainer.appendChild(content);
+            }
+
+            const tabButtons = producerTabsContainer.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    producerContentContainer.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                    button.classList.add('active');
+                    document.getElementById(`producer-content-${button.dataset.tab}`).classList.add('active');
+                });
+            });
+
+            if (tabButtons.length > 0) {
+                tabButtons[0].click();
+            }
         })
         .catch(error => console.error('Error loading content:', error));
 });

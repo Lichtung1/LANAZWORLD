@@ -14,71 +14,42 @@
     <div id="phone">
         <div id="screen">
             <div id="status-bar-top">
-                <span id="time">5:50 PM</span>
+                <span id="time">6:02 PM</span>
                 <span id="os-version">LANAPHONE//OS 1.0</span>
                 <span>📶 88% 🔋</span>
             </div>
 
             <div id="home-screen">
-                <div class="app-icon" onclick="openApp('diary')">
-                    <img class="app-icon-art" src="icons/diary.png" alt="Creator's Log App Icon">
-                    <div class="app-icon-label">Creator's Log</div>
-                </div>
-                <div class="app-icon" onclick="openApp('press')">
-                    <img class="app-icon-art sparkle-text" src="icons/press.png" alt="Press App Icon">
-                    <div class="app-icon-label">Press</div>
-                </div>
-                <div class="app-icon" onclick="openApp('games')">
-                    <img class="app-icon-art" src="icons/games.png" alt="Games App Icon">
-                    <div class="app-icon-label">Games</div>
-                </div>
-                <div class="app-icon" onclick="openApp('locked')">
-                    <img class="app-icon-art" src="icons/locked.png" alt="Secret Box App Icon">
-                    <div class="app-icon-label">Secret Box</div>
-                </div>
+                <div class="app-icon" onclick="openApp('diary')"><img class="app-icon-art" src="icons/diary.png" alt="Creator's Log App Icon"><div class="app-icon-label">Creator's Log</div></div>
+                <div class="app-icon" onclick="openApp('press')"><img class="app-icon-art sparkle-text" src="icons/press.png" alt="Press App Icon"><div class="app-icon-label">Press</div></div>
+                <div class="app-icon" onclick="openApp('notes')"><img class="app-icon-art" src="icons/notes.png" alt="Notes App Icon"><div class="app-icon-label">Notes</div></div>
+                <div class="app-icon" onclick="openApp('games')"><img class="app-icon-art" src="icons/games.png" alt="Games App Icon"><div class="app-icon-label">Games</div></div>
+                <div class="app-icon" onclick="openApp('locked')"><img class="app-icon-art" src="icons/locked.png" alt="Secret Box App Icon"><div class="app-icon-label">Secret Box</div></div>
+                <div class="app-icon" onclick="openApp('producer')"><img class="app-icon-art" src="icons/producer.png" alt="Producer App Icon"><div class="app-icon-label">Producer</div></div>
             </div>
 
             <div id="dock">
-                <div class="app-icon" onclick="openApp('music')">
-                    <img class="app-icon-art" src="icons/music.png" alt="Music App Icon">
-                    <div class="app-icon-label">Music</div>
-                </div>
-                <div class="app-icon" onclick="openApp('collective')">
-                    <img class="app-icon-art" src="icons/collective.png" alt="Collective App Icon">
-                    <div class="app-icon-label">Collective</div>
-                </div>
+                <div class="app-icon" onclick="openApp('music')"><img class="app-icon-art" src="icons/music.png" alt="Music App Icon"><div class="app-icon-label">Music</div></div>
+                <div class="app-icon" onclick="openApp('collective')"><img class="app-icon-art" src="icons/collective.png" alt="Collective App Icon"><div class="app-icon-label">Collective</div></div>
                 <a class="app-icon-link" href="https://www.instagram.com/lanawinterhalt/" target="_blank">
-                    <div class="app-icon">
-                        <img class="app-icon-art" src="icons/instagram.png" alt="Instagram App Icon">
-                        <div class="app-icon-label">Instagram</div>
-                    </div>
+                    <div class="app-icon"><img class="app-icon-art" src="icons/instagram.png" alt="Instagram App Icon"><div class="app-icon-label">Instagram</div></div>
                 </a>
             </div>
 
             <div id="app-container">
-                <div class="app-window" id="diary-app">
-                    <div class="app-header"><div class="app-title" id="diary-title"></div><div class="close-app-btn" onclick="closeApp('diary')">×</div></div>
-                    <div class="app-content"><p id="diary-paragraph1"></p><p id="diary-paragraph2"></p></div>
-                </div>
-                <div class="app-window" id="music-app">
-                    <div class="app-header"><div class="app-title">The Mixtapes</div><div class="close-app-btn" onclick="closeApp('music')">×</div></div>
-                    <div class="app-content"><h2>Latest Album Drop</h2><iframe style="border: 1px solid #ffb8d0; border-radius: 8px; width: 100%; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album=199971988/size=large/bgcol=ffffff/linkcol=ff69b4/artwork=small/transparent=true/" seamless></iframe></div>
-                </div>
-                <div class="app-window" id="collective-app">
-                    <div class="app-header"><div class="app-title" id="collective-title"></div><div class="close-app-btn" onclick="closeApp('collective')">×</div></div>
-                    <div class="app-content"><p id="collective-paragraph1"></p><p id="collective-paragraph2"></p></div>
-                </div>
-                <div class="app-window" id="press-app">
-                    <div class="app-header"><div class="app-title" id="press-title"></div><div class="close-app-btn" onclick="closeApp('press')">×</div></div>
-                    <div class="app-content"><ul id="press-items"></ul></div>
-                </div>
-                <div class="app-window" id="locked-app">
-                    <div class="app-header"><div class="app-title" id="locked-title"></div><div class="close-app-btn" onclick="closeApp('locked')">×</div></div>
-                    <div class="app-content"><p id="locked-paragraph1"></p><p id="locked-paragraph2"></p></div>
-                </div>
-                <div class="app-window" id="games-app">
-                    <div class="app-header"><div class="app-title" id="games-title"></div><div class="close-app-btn" onclick="closeApp('games')">×</div></div>
-                    <div class="app-content"><iframe id="game-iframe" style="width:100%; height: 95%; border:none;" src="https://attogram.github.io/2048-lite/"></iframe></div>
+                <div class="app-window" id="diary-app"><div class="app-header"><div class="app-title" id="diary-title"></div><div class="close-app-btn" onclick="closeApp('diary')">×</div></div><div class="app-content"><p id="diary-paragraph1"></p><p id="diary-paragraph2"></p></div></div>
+                <div class="app-window" id="music-app"><div class="app-header"><div class="app-title">The Mixtapes</div><div class="close-app-btn" onclick="closeApp('music')">×</div></div><div class="app-content"><h2>Latest Album Drop</h2><iframe style="border: 1px solid #ffb8d0; border-radius: 8px; width: 100%; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album=199971988/size=large/bgcol=ffffff/linkcol=ff69b4/artwork=small/transparent=true/" seamless></iframe></div></div>
+                <div class="app-window" id="collective-app"><div class="app-header"><div class="app-title" id="collective-title"></div><div class="close-app-btn" onclick="closeApp('collective')">×</div></div><div class="app-content"><p id="collective-paragraph1"></p><p id="collective-paragraph2"></p></div></div>
+                <div class="app-window" id="press-app"><div class="app-header"><div class="app-title" id="press-title"></div><div class="close-app-btn" onclick="closeApp('press')">×</div></div><div class="app-content"><ul id="press-items"></ul></div></div>
+                <div class="app-window" id="locked-app"><div class="app-header"><div class="app-title" id="locked-title"></div><div class="close-app-btn" onclick="closeApp('locked')">×</div></div><div class="app-content"><p id="locked-paragraph1"></p><p id="locked-paragraph2"></p></div></div>
+                <div class="app-window" id="games-app"><div class="app-header"><div class="app-title" id="games-title"></div><div class="close-app-btn" onclick="closeApp('games')">×</div></div><div class="app-content"><iframe id="game-iframe" style="width:100%; height: 95%; border:none;" src="https://attogram.github.io/2048-lite/"></iframe></div></div>
+                <div class="app-window" id="notes-app"><div class="app-header"><div class="app-title" id="notes-title"></div><div class="close-app-btn" onclick="closeApp('notes')">×</div></div><div class="app-content"><ul id="notes-items"></ul></div></div>
+                <div class="app-window" id="producer-app">
+                    <div class="app-header"><div class="app-title" id="producer-title"></div><div class="close-app-btn" onclick="closeApp('producer')">×</div></div>
+                    <div class="app-content">
+                        <div class="tab-buttons" id="producer-tabs"></div>
+                        <div class="tab-content-container" id="producer-content"></div>
+                    </div>
                 </div>
             </div>
         </div>

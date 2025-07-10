@@ -1,5 +1,4 @@
 :root {
-    /* Fabulous Palette */
     --background: #fff0f5;
     --text: #5c3a54;
     --accent: #ff69b4;
@@ -8,7 +7,6 @@
     --font-header: 'Caveat', cursive;
     --font-body: 'Quicksand', sans-serif;
 }
-
 body {
     background-color: #333;
     display: flex;
@@ -19,7 +17,6 @@ body {
     color: var(--text);
     margin: 0;
 }
-
 #phone {
     width: 414px;
     height: 896px;
@@ -32,7 +29,6 @@ body {
     flex-direction: column;
     transition: all 0.3s ease-out;
 }
-
 #screen {
     flex-grow: 1;
     background-color: var(--background);
@@ -45,7 +41,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 #status-bar-top {
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
@@ -61,20 +56,15 @@ body {
     flex-shrink: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 #time { text-align: left; }
+#os-version {
+    font-family: var(--font-header);
+    font-size: 18px;
+    opacity: 0.8;
+}
 #battery { text-align: right; }
 #battery::before { content: '📶 '; }
 #battery::after { content: ' 🔋'; }
-
-#os-version {
-    /* ✨ REMOVED the font-family rule from here! ✨ */
-    /* It will now use the same font as the rest of the status bar. */
-    font-size: 14px; /* Adjusted size to look good */
-    font-weight: 600;
-    opacity: 0.7; 
-}
-
 #home-screen {
     padding: 20px;
     display: grid;
@@ -82,7 +72,6 @@ body {
     gap: 20px;
     flex-grow: 1;
 }
-
 .app-icon {
     display: flex;
     flex-direction: column;
@@ -90,7 +79,6 @@ body {
     text-align: center;
     cursor: pointer;
 }
-
 .app-icon-art {
     width: 70px;
     height: 70px;
@@ -103,11 +91,7 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.2s;
 }
-
-.app-icon:hover .app-icon-art {
-    transform: scale(1.1);
-}
-
+.app-icon:hover .app-icon-art { transform: scale(1.1); }
 .app-icon-label {
     margin-top: 8px;
     font-size: 14px;
@@ -115,14 +99,11 @@ body {
     color: #fff;
     text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
-
 .sparkle-text { animation: sparkle-anim 2s infinite; }
-
 @keyframes sparkle-anim {
     0%, 100% { filter: brightness(1); }
     50% { filter: brightness(1.5) drop-shadow(0 0 5px var(--accent)); }
 }
-
 #dock {
     padding: 10px;
     margin: 20px;
@@ -134,9 +115,7 @@ body {
     gap: 10px;
     align-items: center;
 }
-
 .app-icon-link { text-decoration: none; }
-
 .app-window {
     display: flex;
     position: absolute;
@@ -152,25 +131,21 @@ body {
     transform: translateY(100%);
     transition: transform 0.4s ease-out, visibility 0.4s;
 }
-
 .app-window.visible {
     visibility: visible;
     transform: translateY(0);
 }
-
 .app-header {
     padding: 60px 20px 10px 20px;
     text-align: center;
     position: relative;
     flex-shrink: 0;
 }
-
 .app-title {
     font-family: var(--font-header);
     font-size: 28px;
     font-weight: bold;
 }
-
 .close-app-btn {
     position: absolute;
     top: 60px;
@@ -185,25 +160,62 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .app-content {
     padding: 0 20px 20px 20px;
     overflow-y: auto;
     flex-grow: 1;
 }
-
 .app-content h2 {
     font-family: var(--font-header);
     font-size: 42px;
     color: var(--accent);
 }
-
 .app-content ul {
     list-style: disc; 
     padding-left: 20px;
 }
-
 .app-content strong { font-weight: 600; color: var(--accent); }
+.tab-buttons {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+.tab-button {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 16px;
+    color: #aaa;
+    border-bottom: 3px solid transparent;
+}
+.tab-button.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 
 @media (max-width: 768px) {
     #phone {
@@ -214,17 +226,7 @@ body {
         background: transparent;
         box-shadow: none;
     }
-
-    #screen {
-        border-radius: 0;
-    }
-
-    .app-window {
-        border-radius: 0;
-    }
-
-    .app-icon-art {
-        width: 75px;
-        height: 75px;
-    }
+    #screen { border-radius: 0; }
+    .app-window { border-radius: 0; }
+    .app-icon-art { width: 75px; height: 75px; }
 }
