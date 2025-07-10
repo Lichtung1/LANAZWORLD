@@ -1,0 +1,30 @@
+{
+  "diary": {
+    "title": "Creator's Log",
+    "paragraph1": "I'm a <strong>Recovering Theatre Kid</strong>–dramatic, emotional, charismatic, sparkly, larger than life–all fuelled by caffeine and Zoloft. As an introverted extrovert, I'm chaotically balanced between a life on the stage as a performer and life as a hermited music producer, composer, and songwriter.",
+    "paragraph2": "My production style mixes dusty guitars and grandiose harmonies in an attempt to leave you feeling sparkly and weightless. This little corner of the internet is my digital scrapbook and sonic universe. Feel free to get lost in it."
+  },
+  "press": {
+    "title": "Press & Praise",
+    "items": [
+      "My album was featured in Exclaim's <a href='https://exclaim.ca/music/article/great-canadian-albums-you-might-have-missed-in-2024' target='_blank'>“22 Great Canadian Albums You Might Have Missed in 2024”</a>.",
+      "I was included in <a href='https://exclaim.ca/music/article/8-emerging-canadian-artists-you-need-to-hear-in-april-2024' target='_blank'>Exclaim! magazine's \"8 new artists you have to hear\"</a>.",
+      "<em>Recovering Theatre Kid</em> charted on the <a href='https://www.earshot-online.com/charts/chartpos.cfm?v9D3ABE83AC578F52D692DDC389342CF59E66416CE4EA40095DC1D0D6E63FF57EF15DA6CFACCBB19216DD89F5D92C4447=B680AE9C2E4E6A702644279F21612623&dWeekOfID=2024-05-07' target='_blank'>!earshot national Top 50</a>.",
+      "I scored the short film <a href='https://www.instagram.com/ojichaag/' target='_blank'>Ojichaag</a> by Rachel Beaulieu of Can Dream Productions.",
+      "I was also the proud loser of 'Producer of the Year' at the 2024 Western Canadian Music Awards."
+    ]
+  },
+  "collective": {
+    "title": "The Good + Plenty Arts Collective",
+    "paragraph1": "This is so important to me. I'm the founder and director of this non-profit organization. We seek to diversify the Manitoba arts scene by providing more opportunities and resources for <strong>women, 2Spirit, non-binary, and gender diverse individuals</strong> interested in music production and audio engineering.",
+    "paragraph2": "The Good + Plenty Arts Collective won the <strong>Rising Leader award</strong> at the Women in Music Canada Honours 2024, and was nominated two years in a row for Community Excellence at the Western Canadian Music Awards."
+  },
+  "locked": {
+    "title": "You found the key!",
+    "paragraph1": "Welcome to the V.I.P. lounge (Very Important Person... that's you!).",
+    "paragraph2": "This is where I'll put a link to a secret message board, or maybe unreleased demos and lyric sheets. A place for the real ones. Thanks for being here."
+  },
+  "games": {
+    "title": "Coffee Break"
+  }
+}

@@ -1,0 +1,223 @@
+:root {
+    /* Fabulous Palette */
+    --background: #fff0f5;
+    --text: #000157;       /* Dark text for inside apps */
+    --accent: #ff69b4;     
+    --app-bg: #bbf7ff;      
+    --border: #ffb6c1;      
+    --font-header: 'Caveat', cursive;
+    --font-body: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    font-family: var(--font-body);
+    color: var(--text);
+    margin: 0;
+}
+
+#phone {
+    width: 414px;
+    height: 896px;
+    background: #1a1a1a;
+    border-radius: 60px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), inset 0 0 0 5px #111;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-out; 
+}
+
+#screen {
+    flex-grow: 1;
+    background-color: var(--background);
+    background-image: url('assets/backgroudn.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 45px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- PERMANENT STATUS BAR --- */
+#status-bar-top {
+    /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* This blurs whatever is behind the element */
+    backdrop-filter: blur(10px);
+    
+    color: var(--text); /* Always dark */
+    padding: 15px 30px 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    z-index: 10;
+    flex-shrink: 0;
+    /* Softer border for the transparent look */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+}
+
+#time { text-align: left; }
+#battery { text-align: right; }
+#battery::before { content: '📶 '; }
+#battery::after { content: ' 🔋'; }
+
+#os-version {
+    font-family: var(--font-header);
+    font-size: 18px;
+    opacity: 0.8; /* Make it a little more subtle */
+}
+
+
+
+/* Home screen sits below the status bar */
+#home-screen {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.app-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+.app-icon-art {
+    width: 70px;
+    height: 70px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 22.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+.app-icon:hover .app-icon-art {
+    transform: scale(1.1);
+}
+.app-icon-label {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+.sparkle-text { animation: sparkle-anim 2s infinite; }
+
+@keyframes sparkle-anim {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.5) drop-shadow(0 0 5px var(--accent)); }
+}
+
+#dock {
+    padding: 10px;
+    margin: 20px;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* --- APP WINDOW STYLES --- */
+.app-window {
+    display: flex;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--app-bg);
+    border-radius: 45px;
+    flex-direction: column;
+    z-index: 5;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out, visibility 0.4s;
+}
+
+.app-window.visible {
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.app-header {
+    padding: 60px 20px 10px 20px;
+    text-align: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.app-title {
+    font-family: var(--font-header);
+    font-size: 28px;
+    font-weight: bold;
+}
+.close-app-btn {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background: #eee;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-content {
+    padding: 0 20px 20px 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+.app-content h2 { 
+    font-family: var(--font-header);
+    font-size: 42px;
+    color: var(--accent); 
+}
+.app-content ul { list-style: '♥  '; padding-left: 20px;}
+.app-content strong { font-weight: 600; color: var(--accent); }
+
+
+/* --- RESPONSIVE DESIGN FOR MOBILE --- */
+@media (max-width: 768px) {
+    #phone {
+        width: 100%;
+        height: 100dvh;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    #screen {
+        border-radius: 0;
+    }
+
+    .app-window {
+        border-radius: 0;
+    }
+
+    .app-icon-art {
+        width: 75px;
+        height: 75px;
+    }
+}
