@@ -14,7 +14,7 @@
     <div id="phone">
         <div id="screen">
             <div id="status-bar-top">
-                <span id="time">6:02 PM</span>
+                <span id="time">12:32 PM</span>
                 <span id="os-version">LANAPHONE//OS 1.0</span>
                 <span>📶 88% 🔋</span>
             </div>
@@ -26,10 +26,13 @@
                 <div class="app-icon" onclick="openApp('games')"><img class="app-icon-art" src="icons/games.png" alt="Games App Icon"><div class="app-icon-label">Games</div></div>
                 <div class="app-icon" onclick="openApp('locked')"><img class="app-icon-art" src="icons/locked.png" alt="Secret Box App Icon"><div class="app-icon-label">Secret Box</div></div>
                 <div class="app-icon" onclick="openApp('producer')"><img class="app-icon-art" src="icons/producer.png" alt="Producer App Icon"><div class="app-icon-label">Producer</div></div>
-            </div>
+                <div class="app-icon" onclick="openApp('song-maker')"><img class="app-icon-art" src="icons/song-maker.png" alt="Song Maker App Icon"><div class="app-icon-label">Song Maker</div></div>
+                <div class="app-icon" onclick="openApp('voicememos')"><img class="app-icon-art" src="icons/voicememos.png" alt="Voice Memos App Icon"><div class="app-icon-label">Voice Memos</div></div>
+                </div>
 
             <div id="dock">
                 <div class="app-icon" onclick="openApp('music')"><img class="app-icon-art" src="icons/music.png" alt="Music App Icon"><div class="app-icon-label">Music</div></div>
+                <div class="app-icon" onclick="openApp('photos')"><img class="app-icon-art" src="icons/photos.png" alt="Photos App Icon"><div class="app-icon-label">Photos</div></div>
                 <div class="app-icon" onclick="openApp('collective')"><img class="app-icon-art" src="icons/collective.png" alt="Collective App Icon"><div class="app-icon-label">Collective</div></div>
                 <a class="app-icon-link" href="https://www.instagram.com/lanawinterhalt/" target="_blank">
                     <div class="app-icon"><img class="app-icon-art" src="icons/instagram.png" alt="Instagram App Icon"><div class="app-icon-label">Instagram</div></div>
@@ -50,6 +53,18 @@
                         <div class="tab-buttons" id="producer-tabs"></div>
                         <div class="tab-content-container" id="producer-content"></div>
                     </div>
+                </div>
+                <div class="app-window" id="song-maker-app">
+                    <div class="app-header"><div class="app-title" id="song-maker-title"></div><div class="close-app-btn" onclick="closeApp('song-maker')">×</div></div>
+                    <div class="app-content"><iframe id="song-maker-iframe" style="width:100%; height: 95%; border:none;"></iframe></div>
+                </div>
+                <div class="app-window" id="photos-app">
+                    <div class="app-header"><div class="app-title" id="photos-title"></div><div class="close-app-btn" onclick="closeApp('photos')">×</div></div>
+                    <div class="app-content"><div id="photo-grid"></div></div>
+                </div>
+                <div class="app-window" id="voicememos-app">
+                    <div class="app-header"><div class="app-title" id="voicememos-title"></div><div class="close-app-btn" onclick="closeApp('voicememos')">×</div></div>
+                    <div class="app-content"><div id="voicememo-list"></div></div>
                 </div>
             </div>
         </div>

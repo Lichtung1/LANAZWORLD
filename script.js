@@ -60,6 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 producerContentContainer.appendChild(content);
             }
 
+            
+
             const tabButtons = producerTabsContainer.querySelectorAll('.tab-button');
             tabButtons.forEach(button => {
                 button.addEventListener('click', () => {
@@ -73,6 +75,34 @@ document.addEventListener('DOMContentLoaded', () => {
             if (tabButtons.length > 0) {
                 tabButtons[0].click();
             }
+            document.getElementById('song-maker-title').innerHTML = data['song-maker'].title;
+            document.getElementById('song-maker-iframe').src = "https://musiclab.chromeexperiments.com/Song-Maker/";
+            
+            // POPULATE NEW PHOTOS APP
+            document.getElementById('photos-title').innerHTML = data.photos.title;
+            const photoGrid = document.getElementById('photo-grid');
+            data.photos.images.forEach(image => {
+                let img = document.createElement('img');
+                img.src = image.src;
+                img.alt = image.alt;
+                photoGrid.appendChild(img);
+            });
+
+            // POPULATE NEW VOICE MEMOS APP
+            document.getElementById('voicememos-title').innerHTML = data.voicememos.title;
+            const voiceMemoList = document.getElementById('voicememo-list');
+            data.voicememos.memos.forEach(memo => {
+                let item = document.createElement('div');
+                item.className = 'voice-memo-item';
+                let title = document.createElement('p');
+                title.textContent = memo.title;
+                let audio = document.createElement('audio');
+                audio.controls = true;
+                audio.src = memo.src;
+                item.appendChild(title);
+                item.appendChild(audio);
+                voiceMemoList.appendChild(item);
+            });
         })
         .catch(error => console.error('Error loading content:', error));
 });

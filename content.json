@@ -53,5 +53,34 @@
         "content": "<h2>Microphones</h2><p>TLM103, SM7B, SM57, SM58, Sennheiser e935</p><h2>Instruments</h2><p>Squier Telecaster, Seagull Performer CW Acoustic, Gretsch short scale bass, Oscar Schmidt ukulele, misc. vintage folk guitars, trumpet, Native Instruments Komplete Kontrol S88, Arturia Minilab 2, BBC Core Orchestra (plug-in)</p><h2>Technical</h2><p>Logic ProX, Scarlett 18i20, Fender Deluxe Reverb (Digital), Boss VE-20 Vocal Performer</p>"
       }
     }
+  },
+  "song-maker": {
+    "title": "Song Maker"
+  },
+  "photos": {
+    "title": "Photo Album",
+    "images": [
+      {
+        "src": "assets/photo1.jpg",
+        "alt": "LOREM IPSOM"
+      },
+      {
+        "src": "assets/photo2.jpg",
+        "alt": "LOREM IPSOM"
+      },
+      {
+        "src": "assets/photo3.jpg",
+        "alt": "LOREM IPSOM"
+      }
+    ]
+  },
+  "voicememos": {
+    "title": "Voice Memos",
+    "memos": [
+      {
+        "title": "LOREM IPSOM",
+        "src": "assets/memo1.mp3"
+      }
+    ]
   }
 }
