@@ -82,5 +82,74 @@
         "src": "assets/memo1.mp3"
       }
     ]
-  }
+  },
+  "merch": {
+    "title": "Merch Store"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "list": [
+      {
+        "name": "General Inquiries",
+        "detail": "For hellos & fan mail",
+        "link": "mailto:lana.winterhalt@gmail.com"
+      },
+      {
+        "name": "Production & Composing",
+        "detail": "Let's make something cool together",
+        "link": "mailto:lana.winterhalt@gmail.com?subject=Production Inquiry"
+      },
+      {
+        "name": "Booking",
+        "detail": "Live performances & speaking gigs",
+        "link": "mailto:booking@lanawinterhalt.com"
+      },
+      {
+        "name": "High Priestess Publishing",
+        "detail": "My Publisher (Website)",
+        "link": "https://www.highpriestesspublishing.com/"
+      },
+      {
+        "name": "Good + Plenty Arts",
+        "detail": "My Non-Profit (Website)",
+        "link": "https://www.goodandplenty.org/"
+      }
+    ]
+  },
+  "messages": {
+    "title": "Texts",
+    "conversation": [
+      {
+        "sender": "other",
+        "text": "Hey! BLAH BLAH"
+      },
+      {
+        "sender": "me",
+        "text": "Hey! BLAH BLAH"
+      },
+      {
+        "sender": "other",
+        "text": "ETC ETC, LOREM IPSUM"
+      },
+      {
+        "sender": "me",
+        "text": "I KNOW! ETC ETC, LOREM IPSUM"
+      }
+    ]
+  },
+  "calendar": {
+    "title": "Calendar",
+    "events": [
+      {
+        "date": "2025-07-13",
+        "title": "Set @ The Handsome Daughter",
+        "description": "HANDSOME DAUGHTER PATIO THIS SUNDAY FOR ALL MY NON-FOLK FESTERS! 3pm, 4pm Two sets of pure Lana Winterhalt nonsense"
+      },
+      {
+        "date": "2025-08-15",
+        "title": "LOREM IPSUM",
+        "description": "LOREM IPSUM!"
+      }
+    ]
+  }    
 }

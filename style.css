@@ -218,6 +218,141 @@ body {
     height: 100%;
     border: none;
 }
+
+.contact-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 5px;
+    border-bottom: 1px solid #eee;
+}
+.contact-item:hover {
+    background-color: #fafafa;
+}
+.contact-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+.contact-name {
+    font-weight: 600;
+    font-size: 18px;
+}
+.contact-detail {
+    font-size: 14px;
+    color: #888;
+}
+#message-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+}
+.message-bubble {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 75%;
+    line-height: 1.4;
+    font-size: 16px;
+}
+.message-bubble.me {
+    background-color: var(--accent);
+    color: white;
+    align-self: flex-end; /* Pushes to the right */
+    border-bottom-right-radius: 5px;
+}
+.message-bubble.other {
+    background-color: #eee;
+    color: #333;
+    align-self: flex-start; /* Pushes to the left */
+    border-bottom-left-radius: 5px;
+}
+#message-input-bar {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    margin-top: auto; /* Pushes to the bottom */
+}
+.text-input-fake {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 8px 12px;
+    color: #aaa;
+}
+.send-btn-fake {
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--accent);
+    cursor: pointer;
+    padding: 8px;
+}
+/* This makes the app-content take up all the space */
+#messages-app .app-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 10px 10px;
+}
+.calendar-event {
+    display: flex;
+    padding: 15px 5px;
+    border-bottom: 1px solid #eee;
+    gap: 15px;
+}
+.event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 60px;
+}
+.event-month {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+.event-day {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+.event-details {
+    display: flex;
+    flex-direction: column;
+}
+.event-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.event-description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.4;
+}
+
+
+
+
 @media (max-width: 768px) {
     #phone {
         width: 100%;

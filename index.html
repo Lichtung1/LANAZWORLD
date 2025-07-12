@@ -14,7 +14,7 @@
     <div id="phone">
         <div id="screen">
             <div id="status-bar-top">
-                <span id="time">12:32 PM</span>
+                <span id="time">10:22 PM</span>
                 <span id="os-version">LANAPHONE//OS 1.0</span>
                 <span>📶 88% 🔋</span>
             </div>
@@ -28,7 +28,11 @@
                 <div class="app-icon" onclick="openApp('producer')"><img class="app-icon-art" src="icons/producer.png" alt="Producer App Icon"><div class="app-icon-label">Producer</div></div>
                 <div class="app-icon" onclick="openApp('song-maker')"><img class="app-icon-art" src="icons/song-maker.png" alt="Song Maker App Icon"><div class="app-icon-label">Song Maker</div></div>
                 <div class="app-icon" onclick="openApp('voicememos')"><img class="app-icon-art" src="icons/voicememos.png" alt="Voice Memos App Icon"><div class="app-icon-label">Voice Memos</div></div>
-                </div>
+                <div class="app-icon" onclick="openApp('contacts')"><img class="app-icon-art" src="icons/contacts.png" alt="Contacts App Icon"><div class="app-icon-label">Contacts</div></div>
+                <div class="app-icon" onclick="openApp('merch')"><img class="app-icon-art" src="icons/merch.png" alt="Merch App Icon"><div class="app-icon-label">Merch</div></div>
+                <div class="app-icon" onclick="openApp('messages')"><img class="app-icon-art" src="icons/messages.png" alt="Messages App Icon"><div class="app-icon-label">Messages</div></div>
+                <div class="app-icon" onclick="openApp('calendar')"><img class="app-icon-art" src="icons/calendar.png" alt="Calendar App Icon"><div class="app-icon-label">Calendar</div></div>
+            </div>
 
             <div id="dock">
                 <div class="app-icon" onclick="openApp('music')"><img class="app-icon-art" src="icons/music.png" alt="Music App Icon"><div class="app-icon-label">Music</div></div>
@@ -65,6 +69,43 @@
                 <div class="app-window" id="voicememos-app">
                     <div class="app-header"><div class="app-title" id="voicememos-title"></div><div class="close-app-btn" onclick="closeApp('voicememos')">×</div></div>
                     <div class="app-content"><div id="voicememo-list"></div></div>
+                </div>
+                <div class="app-window" id="contacts-app">
+                    <div class="app-header"><div class="app-title" id="contacts-title"></div><div class="close-app-btn" onclick="closeApp('contacts')">×</div></div>
+                    <div class="app-content"><div id="contact-list"></div></div>
+                </div>
+                <div class="app-window" id="merch-app">
+                    <div class="app-header">
+                        <div class="app-title" id="merch-title"></div>
+                        <div class="close-app-btn" onclick="closeApp('merch')">×</div>
+                    </div>
+                    <div class="app-content">
+                        <p style="text-align: center; padding-top: 20px;">The official merch store is coming soon!</p>
+                        </div>
+                </div>
+                <div class="app-window" id="messages-app">
+                    <div class="app-header">
+                        <div class="app-title" id="messages-title"></div>
+                        <div class="close-app-btn" onclick="closeApp('messages')">×</div>
+                    </div>
+                    <div class="app-content">
+                        <div id="message-list">
+                            </div>
+                        <div id="message-input-bar">
+                            <div class="text-input-fake">New message...</div>
+                            <div class="send-btn-fake">></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-window" id="calendar-app">
+                    <div class="app-header">
+                        <div class="app-title" id="calendar-title"></div>
+                        <div class="close-app-btn" onclick="closeApp('calendar')">×</div>
+                    </div>
+                    <div class="app-content">
+                        <div id="calendar-list">
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>

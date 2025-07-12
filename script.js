@@ -1,3 +1,4 @@
+// --- DYNAMIC CONTENT LOADER ---
 document.addEventListener('DOMContentLoaded', () => {
     fetch('content.json')
         .then(response => response.json())
@@ -60,8 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 producerContentContainer.appendChild(content);
             }
 
-            
-
             const tabButtons = producerTabsContainer.querySelectorAll('.tab-button');
             tabButtons.forEach(button => {
                 button.addEventListener('click', () => {
@@ -75,10 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (tabButtons.length > 0) {
                 tabButtons[0].click();
             }
+
+            // Populate Song Maker App
             document.getElementById('song-maker-title').innerHTML = data['song-maker'].title;
             document.getElementById('song-maker-iframe').src = "https://musiclab.chromeexperiments.com/Song-Maker/";
-            
-            // POPULATE NEW PHOTOS APP
+
+            // Populate Photos App
             document.getElementById('photos-title').innerHTML = data.photos.title;
             const photoGrid = document.getElementById('photo-grid');
             data.photos.images.forEach(image => {
@@ -88,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 photoGrid.appendChild(img);
             });
 
-            // POPULATE NEW VOICE MEMOS APP
+            // Populate Voice Memos App
             document.getElementById('voicememos-title').innerHTML = data.voicememos.title;
             const voiceMemoList = document.getElementById('voicememo-list');
             data.voicememos.memos.forEach(memo => {
@@ -102,6 +103,76 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.appendChild(title);
                 item.appendChild(audio);
                 voiceMemoList.appendChild(item);
+            });
+            
+            // CONTACTS APP 
+            document.getElementById('contacts-title').innerHTML = data.contacts.title;
+            const contactList = document.getElementById('contact-list');
+            contactList.innerHTML = ''; // Clear it first
+            data.contacts.list.forEach(contact => {
+                let link = document.createElement('a');
+                link.className = 'contact-link';
+                link.href = contact.link;
+                if (!contact.link.startsWith('mailto:')) {
+                    link.target = '_blank';
+                }
+                let item = document.createElement('div');
+                item.className = 'contact-item';
+                let avatar = document.createElement('div');
+                avatar.className = 'contact-avatar';
+                avatar.textContent = contact.name.charAt(0);
+                let info = document.createElement('div');
+                info.className = 'contact-info';
+                let name = document.createElement('div');
+                name.className = 'contact-name';
+                name.textContent = contact.name;
+                let detail = document.createElement('div');
+                detail.className = 'contact-detail';
+                detail.textContent = contact.detail;
+                info.appendChild(name);
+                info.appendChild(detail);
+                item.appendChild(avatar);
+                item.appendChild(info);
+                link.appendChild(item);
+                contactList.appendChild(link);
+            });
+
+            // Populate Merch App
+            document.getElementById('merch-title').innerHTML = data.merch.title;
+
+            // POPULATE NEW MESSAGES APP 
+            document.getElementById('messages-title').innerHTML = data.messages.title;
+            const messageList = document.getElementById('message-list');
+            data.messages.conversation.forEach(msg => {
+                let bubble = document.createElement('div');
+                // Adds the base class AND the sender class ('me' or 'other')
+                bubble.className = `message-bubble ${msg.sender}`;
+                bubble.textContent = msg.text;
+                messageList.appendChild(bubble);
+            });
+
+            //  POPULATE NEW CALENDAR APP 
+            document.getElementById('calendar-title').innerHTML = data.calendar.title;
+            const calendarList = document.getElementById('calendar-list');
+            data.calendar.events.forEach(event => {
+                let eventDiv = document.createElement('div');
+                eventDiv.className = 'calendar-event';
+
+                let date = new Date(event.date + 'T00:00:00'); // Add time to avoid timezone issues
+                let month = date.toLocaleString('default', { month: 'short' });
+                let day = date.getDate();
+
+                let dateDiv = document.createElement('div');
+                dateDiv.className = 'event-date';
+                dateDiv.innerHTML = `<div class="event-month">${month}</div><div class="event-day">${day}</div>`;
+
+                let detailsDiv = document.createElement('div');
+                detailsDiv.className = 'event-details';
+                detailsDiv.innerHTML = `<div class="event-title">${event.title}</div><div class="event-description">${event.description}</div>`;
+
+                eventDiv.appendChild(dateDiv);
+                eventDiv.appendChild(detailsDiv);
+                calendarList.appendChild(eventDiv);
             });
         })
         .catch(error => console.error('Error loading content:', error));
